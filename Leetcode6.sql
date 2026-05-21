@@ -1,5 +1,5 @@
 SELECT v.id_do_cliente,
-       COUNT(v.id_da_visita) AS contagem_sem_transacoes
+       COUNT(*) AS contagem_sem_transacoes
 FROM Visitas v
 LEFT JOIN Transactions t
 ON v.id_da_visita = t.id_da_visita
